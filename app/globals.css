@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  border-color: theme("colors.ink.100");
+}
+
+body {
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: theme("colors.scan.soft");
+}
+
+:focus-visible {
+  outline: 2px solid theme("colors.scan.DEFAULT");
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.container-page {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.line-length {
+  max-width: 62ch;
+}
